@@ -61,6 +61,19 @@ function add_user($login, $pass){
 
 }
 function register_user($auth_data){
+
+if(empty($auth_data)) || !isset($auth_data['login']) || (empty($auth_data['login'])) return false;
+$user = get_user_info($auth_data['login']);
+if (!empty($user)) {
+	$SESSION['error'] = 'Пользователь ' . $auth_data['login']  . 'уже существует';
+	header("Location:" . get_url('register.php'));
+	die;
+}
+if ($auth_data['pass'] !== $auth_data['pass2']) {
+	$SESSION['error'] = 'Пароли не совпадают';
+	header("Location:" . get_url('register.php'));
+	die;
+}
 debug($auth_data, true);
 
 }

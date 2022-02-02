@@ -14,7 +14,7 @@ include_once "functions.php";
 <body>
 <div class="container row">
 	<header class="header">
-		<h1 class="visually-hidden"><?php echo h1 ?> 
+		<h1 class="visually-hidden"><?=SITE_NAME ?> </h1>
 		<nav class="header__navigation">
 			<ul>
 				<li>
