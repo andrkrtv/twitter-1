@@ -11,4 +11,4 @@
 					<button class="tweet-form__btn_center" type="submit">Зарегистрироваться</button>
 				</div>
 			</form>
-		</section>
+		</section> 
